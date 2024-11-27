@@ -3,34 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daerinotes - Home</title>
+    <title>Daerinotes</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>Welcome to Daerinotes</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="intro">
-            <h2>About Me</h2>
-            <p>Your introduction and copywriting will go here.</p>
-        </section>
-        <section class="popular-books">
-            <h2>Popular Books</h2>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>About Me</h2>
+        <p>Your introduction and copywriting will go here.</p>
+        <div class="popular-books">
+            <h3>Popular Books</h3>
             <div class="book-display">Edit this section to add your popular books.</div>
-        </section>
-        <section class="benefits">
-            <h2>Benefits</h2>
+        </div>
+        <div class="benefits">
+            <h3>Benefits</h3>
             <p>Highlight the unique aspects of your work here.</p>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books">
+        <h2>Books</h2>
+        <div class="books-grid">
+            <!-- Books will be dynamically loaded here -->
+        </div>
+        <div class="book-details"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+            <div class="photo">
+                <img src="images/your-photo.png" alt="Your Photo">
+            </div>
+            <div class="text">
+                <p>Your aspirations, portfolio, and likes will go here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Daerinotes</p>
     </footer>
