@@ -1,9 +1,11 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5dc; /* Light beige */
     color: #000;
+    line-height: 1.6;
 }
 
 header {
@@ -14,6 +16,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -22,12 +25,17 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -37,25 +45,56 @@ footer {
     padding: 1rem;
 }
 
+/* Book Grid */
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .book {
     border: 1px solid #000;
     padding: 1rem;
     text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .book img {
     max-width: 100%;
     height: auto;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
+.book h3 {
+    margin: 0.5rem 0;
+}
+
+.book button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.book button:hover {
+    background-color: #444;
+}
+
+/* Book Details (Popup) */
 .book-details {
     display: none;
     position: fixed;
@@ -66,21 +105,56 @@ footer {
     border: 1px solid #000;
     padding: 1rem;
     z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
 .book-details h3 {
     margin-top: 0;
+    font-size: 1.25rem;
 }
 
 .book-details button {
-    display: block;
-    margin: 1rem auto 0;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    border-radius: 5px;
 }
 
+.book-details button:hover {
+    background-color: #444;
+}
+
+/* About Page Photo Animation */
 .photo {
     transition: transform 0.5s ease-in-out;
+    display: inline-block;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .photo:hover {
     transform: rotateY(360deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
 }
