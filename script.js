@@ -13,8 +13,10 @@ function loadBooks() {
             <img src="${book.cover}" alt="${book.title}">
             <h3>${book.title}</h3>
             <p>Price: ${book.price}</p>
-            <button onclick="showDetails(${index})">Buy</button>
+            <button>Buy</button>
         `;
+        const button = bookDiv.querySelector('button');
+        button.addEventListener('click', () => showDetails(index));
         booksGrid.appendChild(bookDiv);
     });
 }
@@ -29,10 +31,21 @@ function showDetails(index) {
         <button onclick="closeDetails()">Close</button>
     `;
     bookDetails.style.display = 'block';
+
+    // Optional: Add overlay to dim the background
+    const overlay = document.createElement('div');
+    overlay.classList.add('book-details-overlay');
+    document.body.appendChild(overlay);
 }
 
 function closeDetails() {
     document.querySelector('.book-details').style.display = 'none';
+
+    // Remove overlay
+    const overlay = document.querySelector('.book-details-overlay');
+    if (overlay) {
+        overlay.remove();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', loadBooks);
