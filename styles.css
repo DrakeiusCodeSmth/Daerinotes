@@ -1,11 +1,10 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5dc; /* Light beige */
     margin: 0;
     padding: 0;
-    background-color: #f5f5dc; /* Light beige */
     color: #000;
-    line-height: 1.6;
 }
 
 header {
@@ -53,7 +52,7 @@ section {
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
     margin: 0 auto;
@@ -90,13 +89,29 @@ section {
     height: auto;
 }
 
-/* Optional: Add styles for the overlay */
-.book-details-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+.photo-animation {
+    animation: flip-card 2s infinite;
+}
+
+@keyframes flip-card {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content .text {
+    max-width: 600px;
+}
+
+.benefits {
+    background-color: #f5f5dc; /* Light beige background */
+    padding: 1rem;
+    margin-top: 2rem;
 }
