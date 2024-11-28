@@ -8,9 +8,9 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header / Menu -->
     <header>
-        <h1>Welcome to Daerinotes</h1>
+        <h1>Daerinotes</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -22,36 +22,44 @@
 
     <!-- Home Section -->
     <section id="home">
-        <h2>About Me</h2>
-        <p>Your introduction and copywriting will go here.</p>
+        <div class="intro">
+            <h2>Welcome to Daerinotes</h2>
+            <p>Your copywriting or introduction goes here. Talk about yourself briefly!</p>
+        </div>
+
         <div class="popular-books">
             <h3>Popular Books</h3>
-            <div class="book-display">Edit this section to add your popular books.</div>
+            <div class="books-display" id="popular-books">
+                <!-- Dynamic Book Cards will go here -->
+            </div>
         </div>
+
         <div class="benefits">
-            <h3>Benefits</h3>
-            <p>Highlight the unique aspects of your work here.</p>
+            <h3>Why Choose Me?</h3>
+            <p>Explain the benefits of your writing or your services here.</p>
         </div>
     </section>
 
     <!-- Books Section -->
     <section id="books">
         <h2>Books</h2>
-        <div class="books-grid">
-            <!-- Books will be dynamically loaded here -->
+        <div class="books-grid" id="book-grid">
+            <!-- Dynamic Book Cards will go here -->
         </div>
-        <div class="book-details"></div>
+        <div class="book-details" id="book-details">
+            <!-- Book Details will appear here when a book is clicked -->
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About</h2>
         <div class="about-content">
             <div class="photo">
-                <img src="images/your-photo.png" alt="Your Photo">
+                <img src="images/your-photo.png" alt="Your Photo" class="photo-animation">
             </div>
             <div class="text">
-                <p>Your aspirations, portfolio, and likes will go here.</p>
+                <h2>About Me</h2>
+                <p>Share your story, aspirations, portfolio, and likes here.</p>
             </div>
         </div>
     </section>
