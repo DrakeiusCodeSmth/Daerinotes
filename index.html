@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daerinotes</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <!-- Header / Menu -->
     <header>
-        <h1>Daerinotes</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -20,53 +18,26 @@
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home">
-        <div class="intro">
-            <h2>Welcome to Daerinotes</h2>
-            <p>Your copywriting or introduction goes here. Talk about yourself briefly!</p>
-        </div>
-
-        <div class="popular-books">
-            <h3>Popular Books</h3>
-            <div class="books-display" id="popular-books">
-                <!-- Dynamic Book Cards will go here -->
+    <main>
+        <section id="home">
+            <div class="intro">
+                <h1>Welcome to Daerinotes</h1>
+                <p>Your go-to place for books, stories, and inspiration.</p>
+                <div class="top-books">
+                    <h2>Top Books</h2>
+                    <div class="books-container">
+                        <!-- Dynamically populated with books -->
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="benefits">
-            <h3>Why Choose Me?</h3>
-            <p>Explain the benefits of your writing or your services here.</p>
-        </div>
-    </section>
-
-    <!-- Books Section -->
-    <section id="books">
-        <h2>Books</h2>
-        <div class="books-grid" id="book-grid">
-            <!-- Dynamic Book Cards will go here -->
-        </div>
-        <div class="book-details" id="book-details">
-            <!-- Book Details will appear here when a book is clicked -->
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-content">
-            <div class="photo">
-                <img src="images/your-photo.png" alt="Your Photo" class="photo-animation">
+            <div class="benefits">
+                <h2>Why Read My Books?</h2>
+                <p>Discover stories that inspire and entertain.</p>
             </div>
-            <div class="text">
-                <h2>About Me</h2>
-                <p>Share your story, aspirations, portfolio, and likes here.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Daerinotes</p>
-    </footer>
-</body>
-</html>
+        <section id="books">
+            <h2>Books</h2>
+            <div class="book-list">
+                <!-- Dynamically populated with books -->
+            </
