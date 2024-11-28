@@ -84,3 +84,19 @@ section {
     padding: 1rem;
     z-index: 1000;
 }
+
+.books-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optional: Add styles for the overlay */
+.book-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
